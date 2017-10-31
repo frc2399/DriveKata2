@@ -53,6 +53,15 @@ public class RobotMap {
         public int id() {return id;}
     }
     
+    public static class Forward
+    {
+        public static class Motor
+        {
+            public static final int DRIVE_LEFT = 1;
+            public static final int DRIVE_RIGHT = -1;
+        }
+    }
+    
     // Solenoids connected to PCM
     public static class PCM
     {

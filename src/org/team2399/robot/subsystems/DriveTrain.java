@@ -29,14 +29,18 @@ public class DriveTrain extends TFUSubsystem {
     
     public void setLeftPercent(double percent)
     {
-        leftFrontTalon.set(percent);
-        leftRearTalon.set(percent);
+        double forwardPercent = percent * RobotMap.Forward.Motor.DRIVE_LEFT;
+        
+        leftFrontTalon.set(forwardPercent);
+        leftRearTalon.set(forwardPercent);
     }
     
     public void setRightPercent(double percent)
     {
-        rightFrontTalon.set(percent);
-        rightRearTalon.set(percent);
+        double forwardPercent = percent * RobotMap.Forward.Motor.DRIVE_RIGHT;
+        
+        rightFrontTalon.set(forwardPercent);
+        rightRearTalon.set(forwardPercent);
     }
 }
 
